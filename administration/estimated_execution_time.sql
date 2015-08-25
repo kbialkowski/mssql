@@ -12,4 +12,4 @@ CAST(((DATEDIFF(s,start_time,GetDate()))/3600) as varchar) + ' hour(s), '
             
 FROM sys.dm_exec_requests r
 CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) s
---WHERE command IN ('DbccFilesCompact','RESTORE DATABASE', 'BACKUP DATABASE', 'RESTORE LOG', 'BACKUP LOG')
+--WHERE command IN ('DbccFilesCompact','RESTORE DATABASE', 'BACKUP DATABASE', 'RESTORE LOG', 'BACKUP LOG')  
